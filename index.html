@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<title>Maybell — Namakkal Store</title>
+<meta name="theme-color" content="#1B2340" />
+<link rel="icon" href="data:," />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="css/style.css" />
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+</head>
+<body>
+
+<!-- ================= LOGIN SCREEN ================= -->
+<div id="login-screen" class="login-screen">
+  <div class="login-card">
+    <div class="login-mark">
+      <span class="login-mark-thread"></span>
+      MAYBELL
+    </div>
+    <p class="login-sub">Namakkal store ledger</p>
+    <form id="login-form">
+      <label class="field">
+        <span>Password</span>
+        <input type="password" id="login-password" required autocomplete="current-password" autofocus />
+      </label>
+      <button type="submit" class="btn btn-primary btn-block" id="login-btn">Sign in</button>
+      <p class="login-error" id="login-error"></p>
+    </form>
+  </div>
+</div>
+
+<!-- ================= APP SHELL ================= -->
+<div id="app-shell" class="app-shell hidden">
+
+  <aside class="sidebar">
+    <div class="brand">
+      <span class="brand-thread"></span>
+      <div>
+        <div class="brand-name">MAYBELL</div>
+        <div class="brand-sub">Namakkal</div>
+      </div>
+    </div>
+    <nav class="nav" id="nav-desktop">
+      <a href="#/dashboard" data-route="dashboard"><i data-ic="grid"></i>Dashboard</a>
+      <a href="#/employees" data-route="employees"><i data-ic="user"></i>Employees</a>
+      <a href="#/attendance" data-route="attendance"><i data-ic="check"></i>Attendance</a>
+      <a href="#/sales" data-route="sales"><i data-ic="rupee"></i>Daily Sales</a>
+      <a href="#/stock" data-route="stock"><i data-ic="box"></i>Stock In/Out</a>
+      <a href="#/expenses" data-route="expenses"><i data-ic="wallet"></i>Expenses</a>
+      <a href="#/feedback" data-route="feedback"><i data-ic="chat"></i>Feedback</a>
+      <a href="#/reports" data-route="reports"><i data-ic="chart"></i>Reports</a>
+    </nav>
+    <div class="sidebar-foot">
+      <a href="#/settings" data-route="settings" class="settings-link"><i data-ic="gear"></i>Settings & Backup</a>
+      <button class="logout-btn" id="logout-btn">Sign out</button>
+    </div>
+  </aside>
+
+  <div class="main-col">
+    <header class="topbar">
+      <button class="hamburger" id="hamburger-btn" aria-label="Menu">☰</button>
+      <div class="topbar-title" id="topbar-title">Dashboard</div>
+      <div class="topbar-date" id="topbar-date"></div>
+    </header>
+
+    <main id="page-root" class="page-root"></main>
+  </div>
+
+  <nav class="tabbar" id="nav-mobile">
+    <a href="#/dashboard" data-route="dashboard"><i data-ic="grid"></i><span>Home</span></a>
+    <a href="#/sales" data-route="sales"><i data-ic="rupee"></i><span>Sales</span></a>
+    <a href="#/stock" data-route="stock"><i data-ic="box"></i><span>Stock</span></a>
+    <a href="#/expenses" data-route="expenses"><i data-ic="wallet"></i><span>Expense</span></a>
+    <a href="#/more" data-route="more" id="more-tab"><i data-ic="dots"></i><span>More</span></a>
+  </nav>
+</div>
+
+<div id="more-sheet" class="more-sheet hidden">
+  <div class="more-sheet-card">
+    <a href="#/employees" data-route="employees"><i data-ic="user"></i>Employees</a>
+    <a href="#/attendance" data-route="attendance"><i data-ic="check"></i>Attendance</a>
+    <a href="#/feedback" data-route="feedback"><i data-ic="chat"></i>Feedback</a>
+    <a href="#/reports" data-route="reports"><i data-ic="chart"></i>Reports</a>
+    <a href="#/settings" data-route="settings"><i data-ic="gear"></i>Settings & Backup</a>
+    <button id="more-close">Close</button>
+  </div>
+</div>
+
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
