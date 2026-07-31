@@ -7,4 +7,4 @@
 // 2. Copy the deployment URL (ends in /exec) and paste it here.
 // ============================================================
 
-export const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxeKJqAiwyYeCecgLwBHO_jC8hoyhUDjgoHHzfdfj9SAuHj8J2IOKjbI_zFAoU_-wTm/exec";
+export const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxLHOiU_HvrEmMDx_jFs-UmgEq9T1vyij1sX5mttKPnS37vuLTZYJ6Ldg-z01wbbeVY/exec";
